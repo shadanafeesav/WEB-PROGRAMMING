@@ -1,0 +1,149 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Form page</title>
+<style>
+body {
+    background-color: lightgreen;
+    text-align: center;
+}
+</style>
+</head>
+
+<body>
+
+<h2 style="color:green">
+<center><u>STUDENT REGISTRATION FORM</u></center>
+</h2>
+
+<form>
+
+<label for="name">Name:</label>
+<input type="text" id="name" name="name">
+<br><br>
+
+<label for="email">Email:</label>
+<input type="email" id="email" name="email">
+<br><br>
+
+<label for="password">Password:</label>
+<input type="password" id="password" name="password">
+<br><br>
+
+<label for="age">Age:</label>
+<input type="number" id="age" name="age">
+<br><br>
+
+<label>Gender:</label><br>
+<input type="radio" name="gender" value="Male">
+<label for="male">Male</label><br>
+
+<input type="radio" name="gender" value="Female">
+<label for="female">Female</label>
+<br><br>
+
+<label for="course">Course:</label>
+<select id="course" name="course">
+    <option>MCA</option>
+    <option>MBA</option>
+    <option>M.Tech</option>
+    <option>BCA</option>
+</select>
+<br><br>
+
+<label>Hobbies:</label>
+<input type="checkbox" name="hobby" value="writing">
+<label for="writing">Writing</label>
+
+<input type="checkbox" name="hobby" value="reading">
+<label for="reading">Reading</label>
+
+<input type="checkbox" name="hobby" value="music">
+<label for="music">Music</label>
+<br><br>
+
+<label for="address">Address:</label>
+<textarea name="address" id="address" rows="4" cols="30"></textarea>
+<br><br>
+
+<label for="dob">Date of Birth:</label>
+<input type="date" id="dob" name="dob">
+<br><br>
+
+<input type="submit" value="Register"
+style="color:white;background-color:green">
+
+<input type="reset" id="clear" value="Clear"
+style="color:white;background-color:blue">
+
+</form>
+<script>
+function validateForm()
+{
+var name=document.getElementById("name").values;
+var email=document.getElementById("email").values;
+var password=document.getElementById("password").values;
+var age=document.getElementById("age").values;
+var gender=document.getElementByName("gender").values;
+var course=document.getElementByName("course").values;
+var hobby=document.getElementByName("hobby").values;
+var address=document.getElementById("address").values;
+var dob=document.getElementById("dob").values;
+var msg=""
+var selected=false;
+if(name=="")
+{
+msg+="Enter Your Name:"
+}
+if(email=="")
+{
+msg+="Enter Email:"
+}
+if(password=="")
+{
+msg+="Enter password:"
+}
+if(age=="")
+{
+msg+="Enter Age:"
+}
+if(gender=="")
+{
+msg+="Enter Gender:"
+}
+if(course=="")
+{
+msg+="Enter Course:"
+}
+for(var i=0;i<hobby.length;i++)
+{
+if(hobby[i].checked)
+{
+selected=true;
+}
+
+if(address=="")
+{
+msg+="Enter Address:"
+}
+if(dob=="")
+{
+msg+="Enter Date of Birth:"
+}
+
+
+
+
+
+}
+
+
+
+
+
+
+</script>
+
+</body>
+</html>
