@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Form page</title>
+<style>
+body {
+    background-color: lightgreen;
+   }
+</style>
+</head>
+
+<body>
+
+<h2 style="color:black">
+<center><u>ONLINE EXAM</u></center>
+</h2>
+
+<form name="exam" onsubmit="return Submit1()" method="get">
+
+<label>Enter Your Name:</label>
+<input type="text" id="name" name="name">
+<br><br>
+
+<label>Register Number:</label>
+<input type="text" id="registerno" name="registerno">
+<br><br>
+
+
+ <label>Date:</label>
+<input type="date" id="date" name="date">
+<br><br>
+
+<center>
+<h3><u>QUESTIONS</u></h3>
+<h4>Attend all the questions</h4></center>
+
+1.What deos html form stands for?
+<br><br>
+
+<input type="radio" name="q1" value="A">Hyper Text Markup Language<br>
+<input type="radio" name="q1" value="B">Hyper Text Mechine Language<br>
+<input type="radio" name="q1" value="C">Simple Markup Language<br>
+<br><br>
+
+2.How many heading tags are available in HTML?
+<br><br>
+
+<input type="radio" name="q2" value="A">6<br>
+<input type="radio" name="q2" value="B">4<br>
+<input type="radio" name="q2" value="C">3<br>
+<br><br>
+
+3.What is the difference between opening and closing tags?
+<br><br>
+
+<input type="radio" name="q3" value="A">Both have slash<br>
+<input type="radio" name="q3" value="B">Closing tag as a slash<br>
+<input type="radio" name="q3" value="C">There is a no difference<br>
+<br><br>
+
+4.Which tag is used to  create a hyperlink?
+<br><br>
+
+<input type="radio" name="q4" value="A">&lt;a&gt;<br>
+<input type="radio" name="q4" value="B">&lt;p&gt;<br>
+<input type="radio" name="q4" value="C">&lt;h1&gt;<br>
+<br><br>
+
+5.Which tag is used to insert an image?
+<br><br>
+
+
+<input type="radio" name="q5" value="A">&lt;img&gt;<br>
+<input type="radio" name="q5" value="B">&lt;table&gt;<br>
+<input type="radio" name="q5" value="C">&lt;body&gt;<br>
+<br><br>
+
+<center>
+<input type="submit" value="Submit">
+<input type="reset" value="Reset">
+</center>
+
+</form>
+
+<script>
+function Submit1()
+{
+if(document.exam.name.value=="" || document.exam.name.value==null)
+{
+  alert("Name cant't be blank");
+  return false;
+}
+if(document.exam.registerno.value=="" || document.exam.registerno.value==null)
+{
+  alert("Enter register number");
+  return false;
+}
+var m=0;
+
+if(document.exam.q1.value=="A")
+m=m+1;
+
+
+if(document.exam.q2.value=="A")
+m=m+1;
+
+
+if(document.exam.q3.value=="B")
+m=m+1;
+
+
+if(document.exam.q4.value=="A")
+m=m+1;
+
+
+if(document.exam.q5.value=="A")
+m=m+1;
+
+
+   alert("Thankyou for attending the the Exam.your score is " + m + "out of 5");
+   return false;
+
+
+}
+</script>
+</body>
+</html>
+
+
+
